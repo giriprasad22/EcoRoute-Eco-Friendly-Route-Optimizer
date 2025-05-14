@@ -1,0 +1,72 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoRoute - Results</title>
+  <link rel="stylesheet" href="main.css"/>
+</head>
+<body>
+  <h1>EcoRoute Summary</h1>
+  <div id="summary"></div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem('ecoRouteData'));
+    const summary = document.getElementById('summary');
+    if (data) {
+      summary.innerHTML = `
+        <p><strong>From:</strong> ${data.start}</p>
+        <p><strong>To:</strong> ${data.end}</p>
+        <p><strong>Distance:</strong> ${(data.distance / 1000).toFixed(2)} km</p>
+        <p><strong>CO₂ Emission:</strong> ${data.co2.toFixed(2)} grams</p>
+      `;
+    } else {
+      summary.textContent = "No data found.";
+    }
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoRoute - CO₂ Emission Results</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header>
+    <h1>EcoRoute</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="query.html">Query</a>
+      <a href="direction.html">Directions</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>CO₂ Emission Comparison</h2>
+    <p>Below are the estimated CO₂ emissions for your selected route by different modes of transportation.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Vehicle Type</th>
+          <th>CO₂ Emission (g/km)</th>
+          <th>Total CO₂ for Route (g)</th>
+        </tr>
+      </thead>
+      <tbody id="emission-table-body">
+        <!-- Populated by JS -->
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EcoRoute</p>
+  </footer>
+
+  <script src="result.js"></script>
+</body>
+</html>
