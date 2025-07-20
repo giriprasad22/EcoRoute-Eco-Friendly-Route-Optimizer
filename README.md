@@ -29,9 +29,13 @@ ________________________________________
 ________________________________________
 
 🛠️ Tech Stack
+
 •	Frontend: HTML, CSS, JavaScript
+
 •	APIs:
+
 o	🗺️ HERE Maps API – for route visualization
+
 o	🌐 OpenCage Geocoding API – for location search & geocoding
 
 ________________________________________
