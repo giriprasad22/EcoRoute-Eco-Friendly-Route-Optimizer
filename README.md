@@ -23,7 +23,7 @@ ________________________________________
 📁 Folder Structure (if needed)
 bash
 CopyEdit
-├── index.html
+├── index.html "\n"
 ├── details.html
 ├── direction.html
 ├── result.html	
